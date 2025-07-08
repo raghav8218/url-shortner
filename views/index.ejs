@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>stats</title>
+  <style>
+    table {
+      width: 60%;
+      margin: auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">URL Statistics</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Short URL</th>
+        <th>Original URL</th>
+        <th>Clicks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% urls.forEach(url => { %>
+        <tr>
+          <td>
+            <a href="/url/<%= url.shortId %>" target="_blank">
+              <%= url.shortId %>
+            </a>
+          </td>
+          <td><%= url.redirectURL %></td>
+          <td><%= url.clicks %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

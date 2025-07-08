@@ -36,6 +36,18 @@ async function handleGet(req, res) {
     res.redirect(entry.redirectURL);
 }
 
+async function handleStats(req,res){
+    const allUrls= await URL.find({});
+
+    const urlWithStats= allUrls.map(entry=>({
+        shortId:entry.shortId,
+        redirectURL: entry.redirectURL,
+        clicks: entry.visitHistory.length
+    }))
+    res.render('index', { urls:urlWithStats });
+}
+
 module.exports= {handleGenerateNewShortURL,
                 handleGet,
+                handleStats
 }

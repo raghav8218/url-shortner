@@ -6,6 +6,9 @@ const router= require('./routes/url')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/url', router);
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 
 connectMongo('mongodb://localhost:27017/short-url')
 .then(()=>console.log("MongoDB connected"))
