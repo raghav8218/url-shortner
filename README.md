@@ -1,7 +1,7 @@
-🌐 URL Shortener
+URL Shortener
 A simple and lightweight URL shortening service built using Node.js, Express, and MongoDB.
 
-🚀 Features
+Features
 Shortens any valid URL into a unique short ID (like abc123xy)
 
 Redirects short URLs to the original destination
@@ -10,14 +10,14 @@ Tracks visit history (timestamps)
 
 Built with modular routes, controllers, and models
 
-📦 Tech Stack
+Tech Stack
 Backend: Node.js + Express
 
 Database: MongoDB + Mongoose
 
 ID Generator: nanoid
 
-🛠️ Setup Instructions
+Setup Instructions
 Clone the repo
 
 bash
@@ -74,7 +74,7 @@ bash
 Copy
 Edit
 GET /url/abc123xy → redirects to https://example.com
-📁 Project Structure
+Project Structure
 bash
 Copy
 Edit
@@ -87,7 +87,8 @@ Edit
 │   └── url.js        # API routes
 ├── connect.js        # MongoDB connection
 ├── index.js          # Main server
-📌 Example
+
+Example
 Request:
 bash
 Copy
